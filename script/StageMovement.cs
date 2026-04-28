@@ -14,6 +14,9 @@ public class StageMovement : MonoBehaviour
     void Update()
     {
         float sin = Mathf.Sin( Time.time );
-        this.transform.position = new Vector3(sin-3, 1,  0 );
+        float x = -3;
+        float y = 1;
+        float z = 0;
+        this.transform.position = new Vector3(sin*x, y,  z );
     }
 }
