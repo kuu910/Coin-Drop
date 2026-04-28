@@ -9,11 +9,12 @@ public class CoinManager : MonoBehaviour
     [SerializeField] public TextMeshPro coinText;
 
     public int coin;
+    private int coins = 150;
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i <= 150; i++)
+        for(int i = 0; i <= coins; i++)
         {
             float x = UnityEngine.Random.Range(-6, 3);
             float y = UnityEngine.Random.Range(2, 15);
@@ -30,8 +31,9 @@ public class CoinManager : MonoBehaviour
             if(coin > 0)
             {
                 float x = UnityEngine.Random.Range(-4, 0);
+                float y = 3;
                 float z = UnityEngine.Random.Range(-2, 2);
-                Instantiate(coinPrefab, new Vector3(x, 3, z), Quaternion.identity);
+                Instantiate(coinPrefab, new Vector3(x, y, z), Quaternion.identity);
                 coin--;
             }
             Debug.Log(coin);
