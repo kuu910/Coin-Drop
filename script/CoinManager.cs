@@ -8,8 +8,9 @@ public class CoinManager : MonoBehaviour
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] public TextMeshPro coinText;
 
+    public int coin;
+
     // Start is called before the first frame update
-     public int coin = 0;
     void Start()
     {
         for(int i = 0; i <= 150; i++)
